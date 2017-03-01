@@ -1,1 +1,1 @@
-Este sumador se realizo a base de tres sumadores medios.
+Este sumador se realizó a base de tres sumadores medios.
