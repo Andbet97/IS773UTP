@@ -28,17 +28,12 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
- 
 ENTITY Motorapasos_tb IS
 END Motorapasos_tb;
  
 ARCHITECTURE behavior OF Motorapasos_tb IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
- 
     COMPONENT Motor_a_pasos
     PORT(
          StepDrive : OUT  std_logic_vector(3 downto 0);
@@ -48,20 +43,16 @@ ARCHITECTURE behavior OF Motorapasos_tb IS
         );
     END COMPONENT;
     
-
    --Inputs
    signal Direction : std_logic := '0';
    signal StepEnable : std_logic := '0';
    signal CLK : std_logic := '0';
-
- 	--Outputs
+ --Outputs
    signal StepDrive : std_logic_vector(3 downto 0);
-
    -- Clock period definitions
    constant CLK_period : time := 20 ns;
  
 BEGIN
- 
 	-- Instantiate the Unit Under Test (UUT)
    uut: Motor_a_pasos PORT MAP (
           StepDrive => StepDrive,
@@ -69,9 +60,7 @@ BEGIN
           StepEnable => StepEnable,
           CLK => CLK
         );
-
-   -- Clock process definitions
-   CLK_process :process
+   CLK_process :process		   -- Clock process definitions
    begin
 		CLK <= '0';
 		wait for CLK_period/2;
@@ -79,21 +68,15 @@ BEGIN
 		wait for CLK_period/2;
    end process;
  
-
-   -- Stimulus process
-   stim_proc: process
+   stim_proc: process	   -- Stimulus process
    begin		
       StepEnable <= '1';
-		direction <= '1';
+		direction <= '1';		--Girar a la derecha
 		wait for 270 ms;
-		direction <= '0';
+		direction <= '0';		--Girar a la izquierda
 		wait for 430 ms;
-		StepEnable <= '0';
+		StepEnable <= '0';	--Apagar habilitador
       --wait for CLK_period*10;
-
-      -- insert stimulus here 
-
       wait;
    end process;
-
 END;
