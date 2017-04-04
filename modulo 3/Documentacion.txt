@@ -5,3 +5,7 @@ important[http://www.lsi.die.upm.es/~marisa/Teaching/LCSE/docs/Ejercicio_7-v3.pd
 http://repositorio.uis.edu.co/jspui/bitstream/123456789/3414/2/132316.pdf(Anexo F).
 http://www.guillehg.com/index.php?option=com_content&view=article&id=19&Itemid=656
 http://perso.wanadoo.es/pictob/comserie.htm#la_norma_rs232
+http://vhdlbynaresh.blogspot.com.co/2013/07/design-of-4-bit-serial-in-parallel-out.html
+http://labs.domipheus.com/blog/a-uart-implementation-in-vhdl/
+http://vhdlbynaresh.blogspot.com.co/2013/07/design-of-parallel-in-serial-out-shift.html
+https://es.slideshare.net/junior198619/timing-hazards-retardos-en-compuertas
