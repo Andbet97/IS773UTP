@@ -43,7 +43,7 @@ signal cont: std_logic_vector (23 downto 0) := (others => '0'); -- variable cont
 begin
 	process (Clk)
 		begin
-		if rising_edge(Clk)then --subida de señal de reloj
+		if rising_edge(Clk)then --subida de seÃ±al de reloj
 			S <= '0';
 			if ((Button = '1') or (cont > 0 and Button = '0')) then
 				if (cont < 10000000) then
@@ -56,4 +56,3 @@ begin
 		end if;
 	end process;
 end Behavioral;
-
